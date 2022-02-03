@@ -1,0 +1,51 @@
+/* textul tuturor linkurilor care indică una dintre adresele care 
+îi aparţin site-ului Google trebuie colorat cu verde; */
+
+a[href^="https://www.google.com"] {
+	color: green;
+}
+
+/*Varianta 1- textul linkului care indică site-ul LINK group trebuie colorat cu roşu; */
+/*
+a[href="https://www.link-group.eu/"] {
+	color: red;
+}
+*/
+
+/*Varianta 2 - textul linkului care indică site-ul LINK group trebuie colorat cu roşu; */
+
+a[target="_blank"] {
+	color: red;
+}
+
+/* paragrafele din cadrul elementului second-div trebuie colorate alternativ cu roşu și albastru (Paragraph 4 să fie roşu,
+ Paragraph 5 să fie albastru, Paragraph 6 din nou roşu...) */
+
+#second-div p:nth-child(odd) {
+	color: blue;
+}
+
+#second-div p:nth-child(even) {
+	color: red;
+}
+
+/* la sfârşitul Paragrafului 2 şi Paragrafului 3, folosind CSS,
+ adăugaţi textul – NEW, care va fi galben; */
+
+#first-div > p::after {
+	content: " - NEW";
+	color: yellow;
+}
+
+
+/* trecând mouse-ul peste elementul Paragraph 10,
+ textul său trebuie să devină înclinat/italic */
+/*
+p:last-child:hover {
+	font-style: italic;
+}
+*/
+p:nth-child(9n-1):hover {
+	font-style: italic;
+}
+
